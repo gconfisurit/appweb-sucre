@@ -240,12 +240,7 @@ $pdf->Cell(0,10,'VERIFIQUE SU MERCANCIA, NO SE ACEPTAN RECLAMOS DESPUES DE HABER
 $pdf->Ln(-5);
 $pdf->Cell(0,10,'Y SELLADO ESTA NOTA DE ENTREGA.',0,0,'C');
 $pdf->Ln();
-$pdf->Cell(0,10,'ESTIMADO CLIENTE CONFIRME SU PAGO REALIZADO A NUESTRA EMPRESA',0,1,'C');
-$pdf->Ln(-5);
-$pdf->Cell(0,10,'CON UN MENSAJE AL WHATSAPP +58 424-9466495',0,1,'C');
-$pdf->SetFont('Arial','B',8); 
-$pdf->Cell(0,5,'"GRACIAS POR PREFERIRNOS".',0,1,'C');
-        $pdf->Ln(25);
+
 
         // lineas de firma
         $pdf->Line(40, $multiplicador_linea + 163, 70, $multiplicador_linea + 163);

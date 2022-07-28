@@ -63,7 +63,7 @@ class NExcobrar extends Conectar{
             CONVERT( date , saacxc.fechae ) as FechaEmi, 
             DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
              UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-             (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+             (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
              from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
              where (DATEADD(dd, 0, DATEDIFF(dd, 0, SAACXC.FechaE)) between DATEADD(day, -7, CONVERT( date ,GETDATE())) and GETDATE()) and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') AND saacxc.CodVend='$vendedor' 
              order by saacxc.FechaE asc";
@@ -73,7 +73,7 @@ class NExcobrar extends Conectar{
             CONVERT( date , saacxc.fechae ) as FechaEmi, 
             DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
              UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-             (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+             (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
              from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
              where (DATEADD(dd, 0, DATEDIFF(dd, 0, SAACXC.FechaE)) between DATEADD(day, -7, CONVERT( date ,GETDATE())) and GETDATE()) and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') 
              order by saacxc.FechaE asc";
@@ -89,7 +89,7 @@ class NExcobrar extends Conectar{
           CONVERT( date , saacxc.fechae ) as FechaEmi, 
           DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
            UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-           (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+           (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
            from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
            where (DATEADD(dd, 0, DATEDIFF(dd, 0, SAACXC.FechaE)) between DATEADD(day, -15, CONVERT( date ,GETDATE())) and DATEADD(day, -8, CONVERT( date ,GETDATE()))) 
            and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') AND saacxc.CodVend='$vendedor' 
@@ -100,7 +100,7 @@ class NExcobrar extends Conectar{
             CONVERT( date , saacxc.fechae ) as FechaEmi, 
             DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
             UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-            (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+            (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
             from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
             where (DATEADD(dd, 0, DATEDIFF(dd, 0, SAACXC.FechaE)) between DATEADD(day, -15, CONVERT( date ,GETDATE())) and DATEADD(day, -8, CONVERT( date ,GETDATE()))) 
             and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') 
@@ -116,7 +116,7 @@ class NExcobrar extends Conectar{
           CONVERT( date , saacxc.fechae ) as FechaEmi, 
           DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
            UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-           (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+           (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
            from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
            where (DATEADD(dd, 0, DATEDIFF(dd, 0, SAACXC.FechaE)) between DATEADD(day, -40, CONVERT( date ,GETDATE())) and DATEADD(day, -16, CONVERT( date ,GETDATE()))) and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') AND saacxc.CodVend='$vendedor' 
            order by saacxc.FechaE asc";
@@ -125,7 +125,7 @@ class NExcobrar extends Conectar{
             CONVERT( date , saacxc.fechae ) as FechaEmi, 
             DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
             UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-            (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+            (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
             from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
             where (DATEADD(dd, 0, DATEDIFF(dd, 0, SAACXC.FechaE)) between DATEADD(day, -40, CONVERT( date ,GETDATE())) and DATEADD(day, -16, CONVERT( date ,GETDATE()))) and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') 
             order by saacxc.FechaE asc";
@@ -140,7 +140,7 @@ class NExcobrar extends Conectar{
             CONVERT( date , saacxc.fechae ) as FechaEmi, 
             DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
             UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-            (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+            (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
             from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
             where (SAACXC.FechaE < DATEADD(day, -40, CONVERT( date ,GETDATE()))) and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') AND saacxc.CodVend='$vendedor' 
             order by saacxc.FechaE asc";
@@ -149,7 +149,7 @@ class NExcobrar extends Conectar{
             CONVERT( date , saacxc.fechae ) as FechaEmi, 
             DATEDIFF(DD, saacxc.fechae, CONVERT( date ,GETDATE()))as DiasTransHoy,
             UPPER(saacxc.codvend) as Ruta, saacxc.saldo as SaldoPend, 
-            (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+            (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
             from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
             where (SAACXC.FechaE < DATEADD(day, -40, CONVERT( date ,GETDATE()))) and saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') 
             order by saacxc.FechaE asc";
@@ -166,7 +166,7 @@ class NExcobrar extends Conectar{
           (case when (DATEDIFF(DD, SAACXC.FechaE, GETDATE())>=8 and DATEDIFF(DD, SAACXC.FechaE, GETDATE())<=15) then SAACXC.Saldo else 0 end) as Total_8_a_15_Dias,
           (case when (DATEDIFF(DD, SAACXC.FechaE, GETDATE())>=16 and DATEDIFF(DD, SAACXC.FechaE, GETDATE())<=40) then SAACXC.Saldo else 0 end) as Total_16_a_40_Dias,
           (case when (DATEDIFF(DD, SAACXC.FechaE, GETDATE())>40) then SAACXC.Saldo else 0 end) as Total_Mayor_a_40_Dias,
-          (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+          (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
           from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
           where saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') AND saacxc.CodVend='$vendedor'
           order by saacxc.FechaE asc";
@@ -177,7 +177,7 @@ class NExcobrar extends Conectar{
           (case when (DATEDIFF(DD, SAACXC.FechaE, GETDATE())>=8 and DATEDIFF(DD, SAACXC.FechaE, GETDATE())<=15) then SAACXC.Saldo else 0 end) as Total_8_a_15_Dias,
           (case when (DATEDIFF(DD, SAACXC.FechaE, GETDATE())>=16 and DATEDIFF(DD, SAACXC.FechaE, GETDATE())<=40) then SAACXC.Saldo else 0 end) as Total_16_a_40_Dias,
           (case when (DATEDIFF(DD, SAACXC.FechaE, GETDATE())>40) then SAACXC.Saldo else 0 end) as Total_Mayor_a_40_Dias,
-          (select Coordinador from SUCRE_D.dbo.SAVEND_02 where SAVEND_02.CodVend = saacxc.CodVend) as Supervisor
+          (select Coordinador from SUCRE_D.dbo.SAVEND_01 where SAVEND_01.CodVend = saacxc.CodVend) as Supervisor
           from SUCRE_D.dbo.saacxc inner join saclie on saacxc.codclie = saclie.codclie 
           where saacxc.saldo>0 AND (saacxc.tipocxc='10' OR saacxc.tipocxc='20') 
           order by saacxc.FechaE asc";

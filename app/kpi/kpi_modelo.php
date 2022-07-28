@@ -12,7 +12,7 @@ class Kpi extends Conectar
         $conectar = parent::conexion2();
         parent::set_names();
 
-        $sql = "SELECT distinct coordinador from savend_02 d inner join savend S on S.codvend= d.CodVend where (d.coordinador = '' or d.coordinador is not null) and d.coordinador != ' ' and S.Activo = 1 and s.codvend != '00' and s.codvend != '16'  order by coordinador Asc";
+        $sql = "SELECT distinct coordinador from SAVEND_01 d inner join savend S on S.codvend= d.CodVend where (d.coordinador = '' or d.coordinador is not null) and d.coordinador != ' ' and S.Activo = 1 and s.codvend != '00' and s.codvend != '16'  order by coordinador Asc";
         $sql = $conectar->prepare($sql);
         $sql->execute();
 
@@ -26,8 +26,8 @@ class Kpi extends Conectar
         $conectar = parent::conexion2();
         parent::set_names();
 
-        $sql = "SELECT * FROM savend INNER JOIN savend_02 ON savend.codvend = savend_02.codvend
-                WHERE activo = '1' AND coordinador != '' AND savend_02.coordinador = ?
+        $sql = "SELECT * FROM savend INNER JOIN SAVEND_01 ON savend.codvend = SAVEND_01.codvend
+                WHERE activo = '1' AND coordinador != '' AND SAVEND_01.coordinador = ?
                 ORDER BY savend.codvend";
         $sql = $conectar->prepare($sql);
         $sql->bindValue(1, $nombre);
@@ -133,7 +133,7 @@ class Kpi extends Conectar
         $conectar = parent::conexion2();
         parent::set_names();
 
-        $sql = "SELECT * FROM savend_02 WHERE CodVend = ?";
+        $sql = "SELECT * FROM SAVEND_01 WHERE CodVend = ?";
         $sql = $conectar->prepare($sql);
         $sql->bindValue(1, $ruta);
         $sql->execute();
@@ -225,7 +225,7 @@ class Kpi extends Conectar
         $conectar = parent::conexion2();
         parent::set_names();
 
-        $sql = "SELECT ObjVentasBu FROM SAVEND_02 where CodVend ='$ruta'";
+        $sql = "SELECT ObjVentasBu FROM SAVEND_01 where CodVend ='$ruta'";
         $sql = $conectar->prepare($sql);
 
         $sql->execute();

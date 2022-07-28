@@ -162,7 +162,6 @@ else { ?>
                                 <th id="tfoot_sinderecho" height="21" colspan="6" style="text-align: center;">SIN DERECHO A CR&Eacute;DITO FISCAL. <br>VERIFIQUE SU MERCANCIA, NO SE ACEPTAN RECLAMOS DESPUES DE HABER FIRMADO Y SELLADO ESTA NOTA DE ENTREGA.</th>
                             </tr>
                              <tr>
-                                <td height="21" colspan="6" style="text-align: center;"><br>ESTIMADO CLIENTE CONFIRME SU PAGO REALIZADO A NUESTRA EMPRESA CON UN MENSAJE AL WHATSAPP +58 424-9466495 <br><b> "GRACIAS POR PREFERIRNOS".</b></td>
                             </tr>
                         </tfoot>
 
